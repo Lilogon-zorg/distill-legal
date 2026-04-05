@@ -1,11 +1,13 @@
 # Privacy Policy
 
-Last updated: March 25, 2026
+Last updated: April 5, 2026
 
-This app collects audio recordings for the sole purpose of voice-to-text transcription. Audio is processed and immediately deleted — it is never stored. 
+Mumble collects audio recordings solely for voice-to-text transcription. Audio is processed in real-time and immediately deleted — it is never stored.
 
-The app uses Google Sign-In to enable cloud sync. Your email and name are used only for account identification.
+The app uses Google Sign-In for account identification. Your email and display name are used only for authentication and cloud sync.
 
-Dictation history is encrypted end-to-end and stored securely.
+Dictation history is encrypted and stored securely. Only you can access your data.
+
+Third-party services: Google (authentication, AI text processing), Groq (speech-to-text), RevenueCat (subscription management).
 
 Contact: lilogon.dev@gmail.com
