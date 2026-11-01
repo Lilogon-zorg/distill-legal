@@ -24,7 +24,7 @@ hr{border:0;border-top:1px solid var(--border);margin:28px 0}
 <body>
 <a class="lang" href="privacy-policy-he.html" hreflang="he">עברית</a>
 <h1>Mumble Privacy Policy</h1>
-<p class="meta">Version 2.0 · Effective November 2, 2026 · This document is a draft for review by counsel</p>
+<p class="meta">Version 2.1 · Effective November 2, 2026 · This document is a draft for review by counsel</p>
 <p>Mumble is a voice-dictation app for Android. You speak; we return polished text in Hebrew, English and other languages. To do that we process your voice and the text made from it, so we want you to know exactly what happens to your data, who receives it and why, how long it is kept, and how to delete it. This document is written in plain language on purpose. If anything is unclear, write to us.</p>
 <h2>1. Who we are and how to reach us</h2>
 <p>The controller of your data (within the meaning of Israel's Protection of Privacy Law) is Or Weis, a registered sole proprietor in Israel trading as Lilogon ("we", "Mumble").
@@ -35,7 +35,7 @@ We answer privacy requests within 30 days.</p>
 <ul>
 <li><strong>Providing data is voluntary.</strong> No law requires you to give us information. Without a voice recording there is nothing to transcribe, and without signing in with a Google account you cannot use cloud dictation. The regular typing keyboard works without an account.</li>
 <li><strong>Purposes:</strong> transcribing your speech into text and polishing it; keeping your history and syncing it between your devices; managing your account, plan and payment; securing the service and preventing abuse; improving reliability and quality using technical metrics only.</li>
-<li><strong>Who receives the data and why:</strong> the recording goes to a transcription service (Soniox in the United States; if it fails, or for the instant preview, also Groq in the United States). The transcript goes to a language model that polishes it (Google Gemini API; if it fails, Groq). Your account, synced history and metrics are kept on our server hosted by Render. Details in sections 5 and 6.</li>
+<li><strong>Who receives the data and why:</strong> the recording goes to a speech-to-text provider in the United States (and, if it fails or for the instant preview, to a backup AI provider in the United States). The transcript goes to a language-model provider that polishes it (processed in its data centres worldwide; if it fails, the backup AI provider). Your account, synced history and metrics are kept on our server at our hosting provider. The current list of providers, by name, is published at <a href="https://lilogon-zorg.github.io/distill-legal/providers.html" dir="ltr">https://lilogon-zorg.github.io/distill-legal/providers.html</a>. Details in sections 5 and 6.</li>
 <li><strong>Your rights:</strong> you may access the data we hold about you (section 13 of the Law) and ask us to correct or delete it (section 14). Details in section 10.</li>
 <li><strong>What we do not do:</strong> we do not train models on your voice or text, we do not identify people by their voice, we do not sell data, and we show no ads.</li>
 </ul>
@@ -46,7 +46,7 @@ We answer privacy requests within 30 days.</p>
 <li><strong>Polishing.</strong> The raw transcript, together with your settings (cleanup style, custom instructions, personal dictionary, translation target if requested), is sent to a language model that fixes punctuation, removes filler words and adapts the text. When you dictate from the keyboard inside another app, a short piece of the text already in the field around the cursor (up to 200 characters before and after) is sent along so that punctuation and capitalisation fit. That piece is not stored.</li>
 <li><strong>Result.</strong> The raw and polished text return to your device and are shown or inserted into the field. If history is on, they are saved on the device and synced to your account.</li>
 </ol>
-<p><strong>"Voice-aware cleanup" (Voice-aware mode):</strong> if you turn this option on in Settings, the recording itself (not only the transcript) is also sent to Google's Gemini model. It is off by default.</p>
+<p><strong>"Voice-aware cleanup" (Voice-aware mode):</strong> if you turn this option on in Settings, the recording itself (not only the transcript) is also sent to the language-model provider. It is off by default.</p>
 <h2>4. The data we process</h2>
 <div class="tbl"><table>
 <thead>
@@ -60,7 +60,7 @@ We answer privacy requests within 30 days.</p>
 <tr>
 <td><strong>Voice recording</strong></td>
 <td>Transcription</td>
-<td>On your device: 72 hours after a completed dictation, so you can replay or re-run it; failed recordings stay until you process or delete them. On our server: never stored. At the transcription providers: deleted right after each request; Groq keeps reliability logs for up to 30 days (section 5)</td>
+<td>On your device: 72 hours after a completed dictation, so you can replay or re-run it; failed recordings stay until you process or delete them. On our server: never stored. At the transcription providers: deleted right after each request; the backup AI provider keeps reliability logs for up to 30 days (section 5)</td>
 </tr>
 <tr>
 <td><strong>Raw transcript and polished text</strong></td>
@@ -128,19 +128,19 @@ We answer privacy requests within 30 days.</p>
 <td>In our mailbox only; deleted once the cancellation is processed and the statutory record period ends</td>
 </tr>
 <tr>
-<td><strong>Subscription identifiers</strong>: our user ID at RevenueCat, the Google Play purchase token, order number</td>
+<td><strong>Subscription identifiers</strong>: our user ID at the subscription-management provider, the Google Play purchase token, order number</td>
 <td>Activating Pro, refunds</td>
-<td>At RevenueCat and Google under their policies; we keep only the plan status</td>
+<td>At the subscription-management provider and Google under their policies; we keep only the plan status</td>
 </tr>
 <tr>
 <td><strong>Server logs</strong> (internal user ID, sizes, timings, model names, provider error messages)</td>
 <td>Operations and troubleshooting</td>
-<td>At Render, up to 30 days. Logs never contain voice or dictated text</td>
+<td>At our hosting provider, up to 30 days. Logs never contain voice or dictated text</td>
 </tr>
 <tr>
 <td><strong>Database backups</strong></td>
 <td>Disaster recovery</td>
-<td>At Render, up to 7 days; deleted data may remain in a backup for that long</td>
+<td>At our hosting provider, up to 7 days; deleted data may remain in a backup for that long</td>
 </tr>
 </tbody>
 </table></div>
@@ -148,10 +148,11 @@ We answer privacy requests within 30 days.</p>
 <p><strong>The typing keyboard:</strong> what you type on Mumble's keyboard stays on your device. The keyboard does not learn from your typing and sends it nowhere. Data leaves the device only when you dictate.</p>
 <h2>5. Who receives the data</h2>
 <p>We cannot transcribe and clean speech without AI models, and those models are run by external providers. Each provider acts on our instructions, is bound by contract not to use the data for its own purposes, and may not train models on your voice or text. No provider may use your voice to identify or verify anyone.</p>
+<p>The table describes each recipient by its role. Who fills each role today is listed on our provider page (see below the table).</p>
 <div class="tbl"><table>
 <thead>
 <tr>
-<th>Provider</th>
+<th>Recipient (role)</th>
 <th>What it receives</th>
 <th>Purpose</th>
 <th>Country</th>
@@ -160,25 +161,25 @@ We answer privacy requests within 30 days.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Soniox</strong></td>
+<td><strong>Speech-to-text provider</strong></td>
 <td>the recording, your dictionary words, language hints</td>
 <td>Transcription (primary service for Hebrew and auto-detect)</td>
 <td>United States</td>
-<td>file and transcript deleted at our request right after each request; in any case Soniox auto-deletes after 30 days</td>
+<td>file and transcript deleted at our request right after each request; in any case auto-deleted by the provider after 30 days</td>
 </tr>
 <tr>
-<td><strong>Groq</strong></td>
+<td><strong>Backup AI provider</strong></td>
 <td>the recording, your dictionary words and language hints (transcription fallback and the instant preview); the transcript, your settings, instructions, dictionary and the text around the cursor (polishing fallback)</td>
-<td>Fallback transcription and polishing</td>
+<td>Fallback transcription and polishing; instant preview</td>
 <td>United States</td>
 <td>does not retain requests; reliability and security logs up to 30 days</td>
 </tr>
 <tr>
-<td><strong>Google (Gemini API)</strong></td>
+<td><strong>Language-model provider</strong></td>
 <td>the transcript, custom instructions, dictionary, text around the cursor; with voice-aware cleanup also the recording</td>
 <td>Text polishing (primary service)</td>
-<td>Google data centres worldwide</td>
-<td>abuse-prevention logs up to 55 days; on the paid service Google does not use the data to improve its products</td>
+<td>a United States provider, processing in its data centres worldwide</td>
+<td>abuse-prevention logs up to 55 days; on the paid service the provider does not use the data to improve its products</td>
 </tr>
 <tr>
 <td><strong>Google (Sign in with Google)</strong></td>
@@ -195,14 +196,14 @@ We answer privacy requests within 30 days.</p>
 <td>per the Google Payments privacy notice</td>
 </tr>
 <tr>
-<td><strong>RevenueCat</strong></td>
+<td><strong>Subscription-management provider</strong></td>
 <td>our user ID, device type and OS, IP address, purchase tokens</td>
 <td>Subscription management</td>
 <td>United States</td>
-<td>per RevenueCat's policy; when you delete your account we ask RevenueCat to delete the subscriber record</td>
+<td>per the provider's policy; when you delete your account we ask the provider to delete the subscriber record</td>
 </tr>
 <tr>
-<td><strong>Render</strong></td>
+<td><strong>Hosting provider</strong></td>
 <td>everything stored on our server (section 4) and server logs</td>
 <td>Hosting the server and database</td>
 <td>United States (Oregon)</td>
@@ -210,7 +211,8 @@ We answer privacy requests within 30 days.</p>
 </tr>
 </tbody>
 </table></div>
-<p>This list matches the "Who processes your speech" screen in the app's Settings, which shows the same providers in short. If we replace or add a provider, we update both before the change.</p>
+<p><strong>The current list of providers.</strong> The names of the companies that currently fill each role, with their country, what they receive and how long they keep it, are published at <a href="https://lilogon-zorg.github.io/distill-legal/providers.html" dir="ltr">https://lilogon-zorg.github.io/distill-legal/providers.html</a>. You can also ask us for them at <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a> and we will send them to you. On request we will also tell you which sub-processors a provider uses for our service.</p>
+<p>This section, the provider list and the "How your speech is processed" screen in the app's Settings describe the same recipients. If we replace or add a provider, we update the provider list and the app screen before the new provider receives any data, and we treat it as a material change under section 16: we show a notice in the app and ask for your consent again. If the change affects a role, a country or a retention period, we also update this section.</p>
 <h2>6. Transfers outside Israel</h2>
 <p>The providers in section 5 operate outside Israel, mostly in the United States, whose law is not recognised in Israel as providing equivalent protection. Transfers rest on two things: <strong>your consent</strong>, given on the onboarding screen before your first recording (and withdrawable at any time by stopping use and deleting your account), <strong>and written agreements</strong> with each provider under which it undertakes to use the data only to provide the service to us, keep it confidential, secure it, not pass it to others except sub-processors bound by the same undertakings, and enable us to honour your rights of access, correction and deletion. We check yearly that these undertakings remain in force.</p>
 <h2>7. Private mode, auto-private mode and the onboarding demo</h2>
@@ -222,6 +224,7 @@ We answer privacy requests within 30 days.</p>
 <h2>8. Cloud sync and encryption</h2>
 <p>Your history, dictionary and settings are stored on our server so they are available on all your devices. In the database they are encrypted with AES-256-GCM using a separate key per user derived from a master key kept outside the database. <strong>Please understand:</strong> this is server-side encryption, not end-to-end encryption. Our server can decrypt the data in order to deliver it to you, so we treat it as sensitive: access to the key is restricted, no person reads users' histories, and logs and metrics contain no content. On the device, history is kept in an encrypted database (SQLCipher) whose key is protected by the Android Keystore, and the audio vault lives in the app's private storage, which the operating system protects. Android backup of app data is disabled.</p>
 <h2>9. How long we keep data</h2>
+<p>The providers in this table are described by their role in section 5; their names are on the current list of providers (<a href="https://lilogon-zorg.github.io/distill-legal/providers.html" dir="ltr">https://lilogon-zorg.github.io/distill-legal/providers.html</a>).</p>
 <div class="tbl"><table>
 <thead>
 <tr>
@@ -239,15 +242,15 @@ We answer privacy requests within 30 days.</p>
 <td>not stored</td>
 </tr>
 <tr>
-<td>Recordings and transcripts at Soniox</td>
+<td>Recordings and transcripts at the speech-to-text provider</td>
 <td>deleted right after each request (at most 30 days)</td>
 </tr>
 <tr>
-<td>Requests at Groq</td>
+<td>Requests at the backup AI provider</td>
 <td>not stored; reliability logs up to 30 days</td>
 </tr>
 <tr>
-<td>Requests at Google Gemini</td>
+<td>Requests at the language-model provider</td>
 <td>abuse-prevention logs up to 55 days</td>
 </tr>
 <tr>
@@ -298,7 +301,7 @@ We answer privacy requests within 30 days.</p>
 </ul>
 <h2>11. Deleting your account</h2>
 <p><strong>In the app:</strong> Settings → Account → Delete account → confirm. <strong>Without the app:</strong> at <a href="https://lilogon-zorg.github.io/distill-legal/delete-account" dir="ltr">https://lilogon-zorg.github.io/distill-legal/delete-account</a> or by email to <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a> from the address you signed up with; we verify the request, delete within 30 days and confirm in writing.</p>
-<p><strong>Deleted immediately:</strong> the account (ID, email, name), synced history, dictionary, settings, usage counters and usage events; we also ask RevenueCat to delete the subscriber record. Technical metrics are unlinked from your identity. On the device, the encrypted database, the audio vault and the encryption keys are erased. Active sign-ins are revoked.
+<p><strong>Deleted immediately:</strong> the account (ID, email, name), synced history, dictionary, settings, usage counters and usage events; we also ask the subscription-management provider to delete the subscriber record. Technical metrics are unlinked from your identity. On the device, the encrypted database, the audio vault and the encryption keys are erased. Active sign-ins are revoked.
 <strong>What remains, and why:</strong> de-identified technical metrics (reliability), payment records at Google and with us as far as the law requires (for example tax law), and copies in backups that expire by themselves within 7 days. Deleting the account does not cancel an active Google Play subscription; cancel it before deleting (Terms, section 12) or through Google Play.</p>
 <h2>12. Security</h2>
 <p>All communication is encrypted (TLS; unencrypted traffic is blocked in the app). Server data is encrypted as described in section 8. Access to the systems is limited to the business owner and protected by multi-factor authentication. Provider access keys are kept on the server only and are not in the app. We log security events and review the configuration yearly. If a security incident that may affect you is discovered, we will notify you without undue delay and no later than 72 hours after we establish that your data is affected, and we will report it to the Privacy Protection Authority (also where a report is not mandatory).</p>
@@ -324,9 +327,14 @@ We answer privacy requests within 30 days.</p>
 </thead>
 <tbody>
 <tr>
+<td>2.1</td>
+<td>November 2, 2026</td>
+<td>Recipients described by role; the current provider names moved to the public provider list (<a href="https://lilogon-zorg.github.io/distill-legal/providers.html" dir="ltr">https://lilogon-zorg.github.io/distill-legal/providers.html</a>); the backup provider's purpose now names the instant preview; a provider change is announced in the app with a fresh consent. No change to what is collected, where it goes, or for how long</td>
+</tr>
+<tr>
 <td>2.0</td>
 <td>November 2, 2026</td>
-<td>Rewritten from the code-level data inventory: full disclosure of the AI providers (Soniox, Groq, Google Gemini), encrypted server-side storage of history for sync, 72-hour on-device audio vault, text around the cursor, explicit retention periods, complete account deletion, private mode, section-11 notice, GDPR chapter, minimum age 16. First Hebrew version</td>
+<td>Rewritten from the code-level data inventory: full disclosure of the AI providers by name, encrypted server-side storage of history for sync, 72-hour on-device audio vault, text around the cursor, explicit retention periods, complete account deletion, private mode, section-11 notice, GDPR chapter, minimum age 16. First Hebrew version</td>
 </tr>
 <tr>
 <td>1.1</td>

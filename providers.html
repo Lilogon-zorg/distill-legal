@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mumble's providers</title>
+<style>
+:root{--bg:#fff;--text:#1a1a1a;--muted:#5c5c5c;--accent:#4f9e9a;--border:#e3e3e3;--card:#f7f7f5}
+@media (prefers-color-scheme:dark){:root{--bg:#131313;--text:#e6e6e6;--muted:#a3a3a3;--accent:#7ec8c4;--border:#333;--card:#1e1e1e}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:24px 16px 48px;max-width:760px;margin-inline:auto;background:var(--bg);color:var(--text);
+ font-family:Rubik,-apple-system,"Segoe UI",Roboto,"Noto Sans Hebrew",Arial,sans-serif;line-height:1.7;font-size:16px}
+h1{font-size:1.7rem;margin:0 0 6px;line-height:1.3}h2{font-size:1.2rem;margin:32px 0 10px;color:var(--accent)}
+h3{font-size:1.05rem;margin:24px 0 8px}p,li{margin:0 0 10px;overflow-wrap:anywhere}a{overflow-wrap:anywhere;unicode-bidi:embed}ul,ol{padding-inline-start:22px}
+strong{font-weight:600}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:20px;padding:12px 14px;background:var(--card);border-inline-start:4px solid var(--accent);border-radius:6px}
+.tbl{overflow-x:auto;margin:12px 0 18px;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:100%}
+th,td{border:1px solid var(--border);padding:8px 10px;vertical-align:top;text-align:start;overflow-wrap:anywhere;min-width:7.5em}th{background:var(--card)}
+hr{border:0;border-top:1px solid var(--border);margin:28px 0}
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
+.lang{float:inline-end;font-size:.9rem}
+</style>
+</head>
+<body>
+<a class="lang" href="providers-he.html" hreflang="he">עברית</a>
+<h1>Mumble's providers</h1>
+<p class="meta">Version 2.1 · Last updated November 2, 2026 · This page is part of the Mumble Privacy Policy (section 5)</p>
+<p>Mumble turns your speech into polished text with the help of a few specialist providers. This page lists who they are today, what each one receives, where it runs and how long it keeps anything. Every provider works only on our instructions, under a written agreement, and <strong>none of them may train models on your voice or text or use your voice to identify you.</strong></p>
+<h3>How your speech is processed</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Provider</th>
+<th>Country</th>
+<th>What it receives</th>
+<th>How long it keeps it</th>
+<th>Trains on your data?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speech-to-text (main)</td>
+<td><strong>Soniox</strong></td>
+<td>United States</td>
+<td>Your recording, your dictionary words, language hints</td>
+<td>Deleted at our request right after each request; auto-deleted after 30 days in any case</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Backup for both steps, and the instant preview</td>
+<td><strong>Groq</strong></td>
+<td>United States</td>
+<td>Your recording, dictionary words and language hints when transcription needs a fallback or for the instant preview; the transcript, your style, instructions, dictionary and the text around the cursor when polishing needs a fallback</td>
+<td>Does not keep requests; reliability and security logs up to 30 days</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Polishing (language model)</td>
+<td><strong>Google (Gemini API, paid service)</strong></td>
+<td>Google's data centres worldwide (a United States company)</td>
+<td>The transcript, your custom instructions, your dictionary, the text around the cursor; with voice-aware cleanup on, also the recording</td>
+<td>Abuse-prevention logs up to 55 days</td>
+<td>No. On the paid service Google does not use the data to improve its products</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Running the service</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Provider</th>
+<th>Country</th>
+<th>What it receives</th>
+<th>How long it keeps it</th>
+<th>Trains on your data?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosting and sync</td>
+<td><strong>Render</strong></td>
+<td>United States (Oregon)</td>
+<td>Everything stored on our server: your account, your encrypted history, dictionary and settings, usage counters, technical metrics, server logs. Never recordings</td>
+<td>As set out in section 9 of the Privacy Policy (server logs up to 30 days, backups up to 7 days)</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>Subscription management</td>
+<td><strong>RevenueCat</strong></td>
+<td>United States</td>
+<td>Our user ID for you, device type and OS, IP address, purchase tokens. Never your speech or text</td>
+<td>Under RevenueCat's policy; when you delete your account we ask RevenueCat to delete the subscriber record</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>Sign-in</td>
+<td><strong>Google (Sign in with Google)</strong></td>
+<td>Google</td>
+<td>The sign-in assertion: account ID, email, name</td>
+<td>Under Google's privacy policy</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>Payments</td>
+<td><strong>Google Play</strong></td>
+<td>Google</td>
+<td>The purchase</td>
+<td>Under the Google Payments privacy notice</td>
+<td>Not applicable</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Never shared with anyone:</strong> what you type on the Mumble keyboard (it stays on your device), your contacts, your location and the list of your apps. We have no advertising or behavioural-analytics SDKs.</p>
+<p><strong>Sub-processors:</strong> a provider may use its own sub-processors to run its service, bound by the same undertakings (Privacy Policy, section 6). The list of a provider's sub-processors is available on request at <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a>.</p>
+<h3>When this list changes</h3>
+<p>We update this page <strong>before</strong> a new provider receives any data, and we show the change in the app and ask for your consent again. If a change affects a role, a country or a retention period, we also update the Privacy Policy. Earlier versions of this list are kept below.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>November 2, 2026</td>
+<td>First published, with Privacy Policy version 2.1. The providers are the same as those named in version 2.0 of the policy.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Questions</h3>
+<p>Write to <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a>. We answer privacy requests within 30 days. Data controller: Or Weis, a registered sole proprietor trading as Lilogon, 2 Hever St., Ramat Gan, Israel. Full details are in the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+<div class="footer">&copy; 2026 Lilogon · lilogon.dev@gmail.com</div>
+</body>
+</html>

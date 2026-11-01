@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הספקים של Mumble</title>
+<style>
+:root{--bg:#fff;--text:#1a1a1a;--muted:#5c5c5c;--accent:#4f9e9a;--border:#e3e3e3;--card:#f7f7f5}
+@media (prefers-color-scheme:dark){:root{--bg:#131313;--text:#e6e6e6;--muted:#a3a3a3;--accent:#7ec8c4;--border:#333;--card:#1e1e1e}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:24px 16px 48px;max-width:760px;margin-inline:auto;background:var(--bg);color:var(--text);
+ font-family:Rubik,-apple-system,"Segoe UI",Roboto,"Noto Sans Hebrew",Arial,sans-serif;line-height:1.7;font-size:16px}
+h1{font-size:1.7rem;margin:0 0 6px;line-height:1.3}h2{font-size:1.2rem;margin:32px 0 10px;color:var(--accent)}
+h3{font-size:1.05rem;margin:24px 0 8px}p,li{margin:0 0 10px;overflow-wrap:anywhere}a{overflow-wrap:anywhere;unicode-bidi:embed}ul,ol{padding-inline-start:22px}
+strong{font-weight:600}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:20px;padding:12px 14px;background:var(--card);border-inline-start:4px solid var(--accent);border-radius:6px}
+.tbl{overflow-x:auto;margin:12px 0 18px;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:100%}
+th,td{border:1px solid var(--border);padding:8px 10px;vertical-align:top;text-align:start;overflow-wrap:anywhere;min-width:7.5em}th{background:var(--card)}
+hr{border:0;border-top:1px solid var(--border);margin:28px 0}
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
+.lang{float:inline-end;font-size:.9rem}
+</style>
+</head>
+<body>
+<a class="lang" href="providers.html" hreflang="en">English</a>
+<h1>הספקים של Mumble</h1>
+<p class="meta">גרסה 2.1 · עודכן לאחרונה ב־2 בנובמבר 2026 · הדף הזה הוא חלק ממדיניות הפרטיות של מאמבל (סעיף 5)</p>
+<p>מאמבל הופכת את הדיבור שלכם לטקסט מלוטש בעזרת כמה ספקים מתמחים. בדף הזה מפורט מי הם כיום, מה כל אחד מהם מקבל, איפה הוא פועל וכמה זמן הוא שומר מידע, אם בכלל. כל ספק פועל רק לפי ההוראות שלנו ולפי הסכם בכתב, <strong>ואף אחד מהם אינו רשאי לאמן מודלים על הקול או הטקסט שלכם, או להשתמש בקול שלכם כדי לזהות אתכם.</strong></p>
+<h3>איך הדיבור שלכם מעובד</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>התפקיד</th>
+<th>הספק</th>
+<th>מדינה</th>
+<th>מה הוא מקבל</th>
+<th>כמה זמן הוא שומר</th>
+<th>מאמן מודלים על המידע שלכם?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>תמלול (השירות הראשי)</td>
+<td><strong>Soniox</strong></td>
+<td>ארצות הברית</td>
+<td>ההקלטה, מילות המילון ורמזי שפה</td>
+<td>נמחקים ביוזמתנו מיד בתום כל בקשה; בכל מקרה נמחקים אוטומטית לאחר 30 יום</td>
+<td>לא</td>
+</tr>
+<tr>
+<td>גיבוי לשני השלבים, ותצוגה מהירה</td>
+<td><strong>Groq</strong></td>
+<td>ארצות הברית</td>
+<td>ההקלטה, מילות המילון ורמזי שפה כשהתמלול זקוק לגיבוי או לצורך התצוגה המהירה; התמלול, הסגנון, ההוראות, המילון והטקסט סביב הסמן כשהליטוש זקוק לגיבוי</td>
+<td>אינו שומר את הבקשות; יומני אמינות ואבטחה עד 30 יום</td>
+<td>לא</td>
+</tr>
+<tr>
+<td>ליטוש (מודל שפה)</td>
+<td><strong>Google (Gemini API, שירות בתשלום)</strong></td>
+<td>מרכזי הנתונים של Google ברחבי העולם (חברה אמריקאית)</td>
+<td>התמלול, ההוראות המותאמות, המילון והטקסט סביב הסמן; כשמופעל "ניקוי מודע לטון הדיבור" גם ההקלטה</td>
+<td>יומני מניעת ניצול לרעה עד 55 יום</td>
+<td>לא. בשירות בתשלום Google אינה משתמשת במידע לשיפור מוצריה</td>
+</tr>
+</tbody>
+</table></div>
+<h3>תפעול השירות</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>התפקיד</th>
+<th>הספק</th>
+<th>מדינה</th>
+<th>מה הוא מקבל</th>
+<th>כמה זמן הוא שומר</th>
+<th>מאמן מודלים על המידע שלכם?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>אירוח וסנכרון</td>
+<td><strong>Render</strong></td>
+<td>ארצות הברית (אורגון)</td>
+<td>כל מה שנשמר בשרת שלנו: החשבון, ההיסטוריה, המילון וההגדרות שלכם (מוצפנים), מוני שימוש, מדדים טכניים ויומני שרת. אף פעם לא הקלטות</td>
+<td>כמפורט בסעיף 9 למדיניות הפרטיות (יומני שרת עד 30 יום, גיבויים עד 7 ימים)</td>
+<td>לא רלוונטי</td>
+</tr>
+<tr>
+<td>ניהול מנויים</td>
+<td><strong>RevenueCat</strong></td>
+<td>ארצות הברית</td>
+<td>מזהה המשתמש שלכם אצלנו, סוג המכשיר ומערכת ההפעלה, כתובת IP, אסימוני רכישה. אף פעם לא הדיבור או הטקסט שלכם</td>
+<td>לפי מדיניות RevenueCat; כשאתם מוחקים את החשבון אנחנו מבקשים מ־RevenueCat למחוק את רשומת המנוי</td>
+<td>לא רלוונטי</td>
+</tr>
+<tr>
+<td>התחברות</td>
+<td><strong>Google (Sign in with Google)</strong></td>
+<td>Google</td>
+<td>אישור ההתחברות: מזהה החשבון, דוא"ל, שם</td>
+<td>לפי מדיניות הפרטיות של Google</td>
+<td>לא רלוונטי</td>
+</tr>
+<tr>
+<td>תשלומים</td>
+<td><strong>Google Play</strong></td>
+<td>Google</td>
+<td>הרכישה</td>
+<td>לפי הודעת הפרטיות של Google Payments</td>
+<td>לא רלוונטי</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>לא מועבר לאף אחד:</strong> מה שאתם מקלידים במקלדת של מאמבל (זה נשאר במכשיר), אנשי הקשר, המיקום ורשימת האפליקציות שלכם. אין אצלנו רכיבי פרסום או ניתוח התנהגותי.</p>
+<p><strong>ספקי משנה:</strong> ספק רשאי להיעזר בספקי משנה משלו כדי להפעיל את השירות שלו, והם כפופים לאותן התחייבויות (מדיניות הפרטיות, סעיף 6). רשימת ספקי המשנה של כל ספק תימסר לפי בקשה בכתובת <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a>.</p>
+<h3>כשהרשימה משתנה</h3>
+<p>אנחנו מעדכנים את הדף הזה <strong>לפני</strong> שספק חדש מקבל מידע כלשהו, מציגים את השינוי באפליקציה ומבקשים את הסכמתכם מחדש. אם השינוי נוגע לתפקיד, למדינה או לתקופת השמירה, נעדכן גם את מדיניות הפרטיות. גרסאות קודמות של הרשימה נשמרות כאן למטה.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>תאריך</th>
+<th>השינוי</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 בנובמבר 2026</td>
+<td>פרסום ראשון, יחד עם גרסה 2.1 של מדיניות הפרטיות. הספקים זהים לאלה שנקבו בשמם בגרסה 2.0 של המדיניות.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>שאלות</h3>
+<p>כתבו לנו לכתובת <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a>. אנחנו משיבים לפניות בענייני פרטיות בתוך 30 יום. בעל השליטה במאגר המידע: אור וייס, עוסק יחיד הפועל תחת השם המסחרי Lilogon, רחוב חבר 2, רמת גן. הפירוט המלא ב<a href="privacy-policy-he.html">מדיניות הפרטיות</a>.</p>
+<div class="footer">&copy; 2026 Lilogon · lilogon.dev@gmail.com</div>
+</body>
+</html>
