@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mumble Privacy Policy</title>
+<style>
+:root{--bg:#fff;--text:#1a1a1a;--muted:#5c5c5c;--accent:#4f9e9a;--border:#e3e3e3;--card:#f7f7f5}
+@media (prefers-color-scheme:dark){:root{--bg:#131313;--text:#e6e6e6;--muted:#a3a3a3;--accent:#7ec8c4;--border:#333;--card:#1e1e1e}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:24px 16px 48px;max-width:760px;margin-inline:auto;background:var(--bg);color:var(--text);
+ font-family:Rubik,-apple-system,"Segoe UI",Roboto,"Noto Sans Hebrew",Arial,sans-serif;line-height:1.7;font-size:16px}
+h1{font-size:1.7rem;margin:0 0 6px;line-height:1.3}h2{font-size:1.2rem;margin:32px 0 10px;color:var(--accent)}
+h3{font-size:1.05rem;margin:24px 0 8px}p,li{margin:0 0 10px;overflow-wrap:anywhere}a{overflow-wrap:anywhere;unicode-bidi:embed}ul,ol{padding-inline-start:22px}
+strong{font-weight:600}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:20px;padding:12px 14px;background:var(--card);border-inline-start:4px solid var(--accent);border-radius:6px}
+.tbl{overflow-x:auto;margin:12px 0 18px;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:100%}
+th,td{border:1px solid var(--border);padding:8px 10px;vertical-align:top;text-align:start;overflow-wrap:anywhere;min-width:7.5em}th{background:var(--card)}
+hr{border:0;border-top:1px solid var(--border);margin:28px 0}
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
+.lang{float:inline-end;font-size:.9rem}
+</style>
+</head>
+<body>
+<a class="lang" href="privacy-policy-he.html" hreflang="he">עברית</a>
+<h1>Mumble Privacy Policy</h1>
+<p class="meta">Version 2.0 · Effective November 2, 2026 · This document is a draft for review by counsel</p>
+<p>Mumble is a voice-dictation app for Android. You speak; we return polished text in Hebrew, English and other languages. To do that we process your voice and the text made from it, so we want you to know exactly what happens to your data, who receives it and why, how long it is kept, and how to delete it. This document is written in plain language on purpose. If anything is unclear, write to us.</p>
+<h2>1. Who we are and how to reach us</h2>
+<p>The controller of your data (within the meaning of Israel's Protection of Privacy Law) is Or Weis, a registered sole proprietor in Israel trading as Lilogon ("we", "Mumble").
+Postal address: 2 Hever St., Ramat Gan, Israel.
+Privacy contact: <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a>.
+We answer privacy requests within 30 days.</p>
+<h2>2. What you should know before you start (notice under section 11 of Israel's Protection of Privacy Law)</h2>
+<ul>
+<li><strong>Providing data is voluntary.</strong> No law requires you to give us information. Without a voice recording there is nothing to transcribe, and without signing in with a Google account you cannot use cloud dictation. The regular typing keyboard works without an account.</li>
+<li><strong>Purposes:</strong> transcribing your speech into text and polishing it; keeping your history and syncing it between your devices; managing your account, plan and payment; securing the service and preventing abuse; improving reliability and quality using technical metrics only.</li>
+<li><strong>Who receives the data and why:</strong> the recording goes to a transcription service (Soniox in the United States; if it fails, or for the instant preview, also Groq in the United States). The transcript goes to a language model that polishes it (Google Gemini API; if it fails, Groq). Your account, synced history and metrics are kept on our server hosted by Render. Details in sections 5 and 6.</li>
+<li><strong>Your rights:</strong> you may access the data we hold about you (section 13 of the Law) and ask us to correct or delete it (section 14). Details in section 10.</li>
+<li><strong>What we do not do:</strong> we do not train models on your voice or text, we do not identify people by their voice, we do not sell data, and we show no ads.</li>
+</ul>
+<h2>3. What happens when you dictate</h2>
+<ol>
+<li><strong>Recording.</strong> The app records your voice only while you tap (or hold) the microphone. The recording is first saved on your device, in the app's private storage, so it is not lost if the connection drops.</li>
+<li><strong>Transcription.</strong> The recording is sent over an encrypted connection to our server and from there to the transcription service. Our server holds the audio in memory only and never writes it to disk.</li>
+<li><strong>Polishing.</strong> The raw transcript, together with your settings (cleanup style, custom instructions, personal dictionary, translation target if requested), is sent to a language model that fixes punctuation, removes filler words and adapts the text. When you dictate from the keyboard inside another app, a short piece of the text already in the field around the cursor (up to 200 characters before and after) is sent along so that punctuation and capitalisation fit. That piece is not stored.</li>
+<li><strong>Result.</strong> The raw and polished text return to your device and are shown or inserted into the field. If history is on, they are saved on the device and synced to your account.</li>
+</ol>
+<p><strong>"Voice-aware cleanup" (Voice-aware mode):</strong> if you turn this option on in Settings, the recording itself (not only the transcript) is also sent to Google's Gemini model. It is off by default.</p>
+<h2>4. The data we process</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Why</th>
+<th>Where and for how long</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Voice recording</strong></td>
+<td>Transcription</td>
+<td>On your device: 72 hours after a completed dictation, so you can replay or re-run it; failed recordings stay until you process or delete them. On our server: never stored. At the transcription providers: deleted right after each request; Groq keeps reliability logs for up to 30 days (section 5)</td>
+</tr>
+<tr>
+<td><strong>Raw transcript and polished text</strong></td>
+<td>Display, history, sync between devices, personal stats</td>
+<td>On the device: in an encrypted database. On the server: encrypted, until you delete the entry or the account. Each entry's word count and language code are stored unencrypted for the stats</td>
+</tr>
+<tr>
+<td><strong>Text around the cursor</strong> (keyboard dictation)</td>
+<td>Fitting punctuation and capitalisation</td>
+<td>Not stored anywhere</td>
+</tr>
+<tr>
+<td><strong>Personal dictionary</strong> (words and names)</td>
+<td>Better recognition of names and terms</td>
+<td>On the device and the server (encrypted); sent to the transcription and polishing providers with every request; until you remove it</td>
+</tr>
+<tr>
+<td><strong>Custom instructions</strong> (up to 500 characters)</td>
+<td>Polishing in your style</td>
+<td>On the device and the server (encrypted); sent to the polishing model with every request</td>
+</tr>
+<tr>
+<td><strong>Settings</strong> (style, languages, toggles)</td>
+<td>Sync</td>
+<td>On the device and the server (encrypted)</td>
+</tr>
+<tr>
+<td><strong>Account details</strong> from Google: account ID, email address, display name</td>
+<td>Sign-in, plan and trial management</td>
+<td>On the server, until account deletion</td>
+</tr>
+<tr>
+<td><strong>Usage counters</strong> (dictations per day, total audio duration)</td>
+<td>Free-tier limit, fair use, stats</td>
+<td>On the server, 400 days</td>
+</tr>
+<tr>
+<td><strong>Technical metrics</strong> (processing times, which provider and model were used, audio size, word count, whether the transcript was Hebrew, outcome)</td>
+<td>Reliability, cost, quality</td>
+<td>On the server; the link to your account is removed after 90 days and the row is deleted after 24 months. <strong>Metrics never contain text or audio</strong></td>
+</tr>
+<tr>
+<td><strong>In-app usage events</strong> (for example "onboarding step completed", "keyboard enabled", "subscription purchased"), without free text</td>
+<td>To learn whether onboarding works</td>
+<td>On the server, 180 days</td>
+</tr>
+<tr>
+<td><strong>Category of the app you are typing in</strong> (for example "email" or "chat"), derived on the device from the app's package name; the package name itself is never sent</td>
+<td>Tone</td>
+<td>Sent with each request and stored with the synced entry</td>
+</tr>
+<tr>
+<td><strong>Device time zone</strong></td>
+<td>Daily and weekly stats</td>
+<td>Sent with sync, not stored</td>
+</tr>
+<tr>
+<td><strong>IP address</strong></td>
+<td>Delivering the request, rate limiting and abuse prevention</td>
+<td>Received by our hosting provider with every request; not written to our logs and not stored</td>
+</tr>
+<tr>
+<td><strong>ID number</strong> (users in Israel, only if you email us a subscription-cancellation notice)</td>
+<td>Verifying the cancellation as the Consumer Protection Law requires</td>
+<td>In our mailbox only; deleted once the cancellation is processed and the statutory record period ends</td>
+</tr>
+<tr>
+<td><strong>Subscription identifiers</strong>: our user ID at RevenueCat, the Google Play purchase token, order number</td>
+<td>Activating Pro, refunds</td>
+<td>At RevenueCat and Google under their policies; we keep only the plan status</td>
+</tr>
+<tr>
+<td><strong>Server logs</strong> (internal user ID, sizes, timings, model names, provider error messages)</td>
+<td>Operations and troubleshooting</td>
+<td>At Render, up to 30 days. Logs never contain voice or dictated text</td>
+</tr>
+<tr>
+<td><strong>Database backups</strong></td>
+<td>Disaster recovery</td>
+<td>At Render, up to 7 days; deleted data may remain in a backup for that long</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What we do not collect:</strong> location, contacts, the list of apps on your device, advertising ID, payment-card details (payment is handled by Google and never reaches us). The app contains no third-party SDKs for behavioural analytics, advertising or crash reporting.</p>
+<p><strong>The typing keyboard:</strong> what you type on Mumble's keyboard stays on your device. The keyboard does not learn from your typing and sends it nowhere. Data leaves the device only when you dictate.</p>
+<h2>5. Who receives the data</h2>
+<p>We cannot transcribe and clean speech without AI models, and those models are run by external providers. Each provider acts on our instructions, is bound by contract not to use the data for its own purposes, and may not train models on your voice or text. No provider may use your voice to identify or verify anyone.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>What it receives</th>
+<th>Purpose</th>
+<th>Country</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Soniox</strong></td>
+<td>the recording, your dictionary words, language hints</td>
+<td>Transcription (primary service for Hebrew and auto-detect)</td>
+<td>United States</td>
+<td>file and transcript deleted at our request right after each request; in any case Soniox auto-deletes after 30 days</td>
+</tr>
+<tr>
+<td><strong>Groq</strong></td>
+<td>the recording, your dictionary words and language hints (transcription fallback and the instant preview); the transcript, your settings, instructions, dictionary and the text around the cursor (polishing fallback)</td>
+<td>Fallback transcription and polishing</td>
+<td>United States</td>
+<td>does not retain requests; reliability and security logs up to 30 days</td>
+</tr>
+<tr>
+<td><strong>Google (Gemini API)</strong></td>
+<td>the transcript, custom instructions, dictionary, text around the cursor; with voice-aware cleanup also the recording</td>
+<td>Text polishing (primary service)</td>
+<td>Google data centres worldwide</td>
+<td>abuse-prevention logs up to 55 days; on the paid service Google does not use the data to improve its products</td>
+</tr>
+<tr>
+<td><strong>Google (Sign in with Google)</strong></td>
+<td>the sign-in assertion: ID, email, name</td>
+<td>Sign-in</td>
+<td>Google</td>
+<td>per Google's privacy policy</td>
+</tr>
+<tr>
+<td><strong>Google Play</strong></td>
+<td>the purchase</td>
+<td>Subscriptions, refunds</td>
+<td>Google</td>
+<td>per the Google Payments privacy notice</td>
+</tr>
+<tr>
+<td><strong>RevenueCat</strong></td>
+<td>our user ID, device type and OS, IP address, purchase tokens</td>
+<td>Subscription management</td>
+<td>United States</td>
+<td>per RevenueCat's policy; when you delete your account we ask RevenueCat to delete the subscriber record</td>
+</tr>
+<tr>
+<td><strong>Render</strong></td>
+<td>everything stored on our server (section 4) and server logs</td>
+<td>Hosting the server and database</td>
+<td>United States (Oregon)</td>
+<td>per the retention table in section 9</td>
+</tr>
+</tbody>
+</table></div>
+<p>This list matches the "Who processes your speech" screen in the app's Settings, which shows the same providers in short. If we replace or add a provider, we update both before the change.</p>
+<h2>6. Transfers outside Israel</h2>
+<p>The providers in section 5 operate outside Israel, mostly in the United States, whose law is not recognised in Israel as providing equivalent protection. Transfers rest on two things: <strong>your consent</strong>, given on the onboarding screen before your first recording (and withdrawable at any time by stopping use and deleting your account), <strong>and written agreements</strong> with each provider under which it undertakes to use the data only to provide the service to us, keep it confidential, secure it, not pass it to others except sub-processors bound by the same undertakings, and enable us to honour your rights of access, correction and deletion. We check yearly that these undertakings remain in force.</p>
+<h2>7. Private mode, auto-private mode and the onboarding demo</h2>
+<ul>
+<li><strong>Private mode:</strong> when on, the dictation is not saved to history or synced, and the recording is deleted from the device as soon as processing ends. The providers in section 5 still process the dictation to return your text, but nothing of it remains with us.</li>
+<li><strong>Auto-private mode:</strong> when on, Mumble switches to private mode by itself in fields that the host app marks as private or incognito. The same rules apply.</li>
+<li><strong>Onboarding demo:</strong> you can try Mumble before signing in. The demo recording is processed by the same providers under the same rules and is not linked to an account; neither the recording nor the text is stored. We keep only an anonymous technical metric (timings, provider, outcome).</li>
+</ul>
+<h2>8. Cloud sync and encryption</h2>
+<p>Your history, dictionary and settings are stored on our server so they are available on all your devices. In the database they are encrypted with AES-256-GCM using a separate key per user derived from a master key kept outside the database. <strong>Please understand:</strong> this is server-side encryption, not end-to-end encryption. Our server can decrypt the data in order to deliver it to you, so we treat it as sensitive: access to the key is restricted, no person reads users' histories, and logs and metrics contain no content. On the device, history is kept in an encrypted database (SQLCipher) whose key is protected by the Android Keystore, and the audio vault lives in the app's private storage, which the operating system protects. Android backup of app data is disabled.</p>
+<h2>9. How long we keep data</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recordings on the device</td>
+<td>72 hours after a completed dictation; in private mode — deleted immediately; failed recordings — until you process or delete them</td>
+</tr>
+<tr>
+<td>Recordings on our server</td>
+<td>not stored</td>
+</tr>
+<tr>
+<td>Recordings and transcripts at Soniox</td>
+<td>deleted right after each request (at most 30 days)</td>
+</tr>
+<tr>
+<td>Requests at Groq</td>
+<td>not stored; reliability logs up to 30 days</td>
+</tr>
+<tr>
+<td>Requests at Google Gemini</td>
+<td>abuse-prevention logs up to 55 days</td>
+</tr>
+<tr>
+<td>Synced history, dictionary and settings</td>
+<td>until you delete them (permanent deletion within 30 days) or delete the account</td>
+</tr>
+<tr>
+<td>Account details</td>
+<td>until account deletion</td>
+</tr>
+<tr>
+<td>Usage counters</td>
+<td>400 days</td>
+</tr>
+<tr>
+<td>Technical metrics</td>
+<td>unlinked from the account after 90 days; deleted after 24 months</td>
+</tr>
+<tr>
+<td>In-app usage events</td>
+<td>180 days</td>
+</tr>
+<tr>
+<td>ID number (in an emailed cancellation notice)</td>
+<td>until the cancellation is processed and the statutory record period ends</td>
+</tr>
+<tr>
+<td>Sign-in token</td>
+<td>30 days, or until sign-out or account deletion</td>
+</tr>
+<tr>
+<td>Server logs</td>
+<td>up to 30 days</td>
+</tr>
+<tr>
+<td>Backups</td>
+<td>up to 7 days</td>
+</tr>
+</tbody>
+</table></div>
+<h2>10. Your rights</h2>
+<ul>
+<li><strong>Access:</strong> you may obtain a copy of your data. In the app: Settings → Account → Export my data (a JSON file with your history, dictionary, settings and account details). By email: within 30 days, in Hebrew, Arabic or English.</li>
+<li><strong>Correction and deletion:</strong> you can edit and delete any entry, dictionary word and setting directly in the app. Other requests by email are answered within 30 days. If we refuse a request we explain why in writing within 30 days and note your right to appeal to the Magistrates' Court.</li>
+<li><strong>Account deletion:</strong> section 11.</li>
+<li><strong>Withdrawing consent:</strong> you may stop using the service and delete your account at any time. Withdrawal does not affect processing that already took place.</li>
+<li><strong>Complaints:</strong> you may contact Israel's Privacy Protection Authority (<a href="https://www.gov.il/en/departments/the_privacy_protection_authority" dir="ltr">www.gov.il/en/departments/the_privacy_protection_authority</a>). We would be glad to try to resolve the matter directly first.</li>
+</ul>
+<h2>11. Deleting your account</h2>
+<p><strong>In the app:</strong> Settings → Account → Delete account → confirm. <strong>Without the app:</strong> at <a href="https://lilogon-zorg.github.io/distill-legal/delete-account" dir="ltr">https://lilogon-zorg.github.io/distill-legal/delete-account</a> or by email to <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a> from the address you signed up with; we verify the request, delete within 30 days and confirm in writing.</p>
+<p><strong>Deleted immediately:</strong> the account (ID, email, name), synced history, dictionary, settings, usage counters and usage events; we also ask RevenueCat to delete the subscriber record. Technical metrics are unlinked from your identity. On the device, the encrypted database, the audio vault and the encryption keys are erased. Active sign-ins are revoked.
+<strong>What remains, and why:</strong> de-identified technical metrics (reliability), payment records at Google and with us as far as the law requires (for example tax law), and copies in backups that expire by themselves within 7 days. Deleting the account does not cancel an active Google Play subscription; cancel it before deleting (Terms, section 12) or through Google Play.</p>
+<h2>12. Security</h2>
+<p>All communication is encrypted (TLS; unencrypted traffic is blocked in the app). Server data is encrypted as described in section 8. Access to the systems is limited to the business owner and protected by multi-factor authentication. Provider access keys are kept on the server only and are not in the app. We log security events and review the configuration yearly. If a security incident that may affect you is discovered, we will notify you without undue delay and no later than 72 hours after we establish that your data is affected, and we will report it to the Privacy Protection Authority (also where a report is not mandatory).</p>
+<h2>13. Children</h2>
+<p>Mumble is intended for users aged 16 and over. If you are under 18, buying a subscription requires a parent's or guardian's consent. We do not knowingly collect data from children under 16; if we learn of such a registration we delete the account. Parents may contact us by email.</p>
+<h2>14. Users in the European Union, the EEA and the United Kingdom</h2>
+<p>If you are in the EU, the EEA or the UK, the GDPR (or UK GDPR) also applies to you. The controller is described in section 1. Legal bases: performance of our contract with you (dictation, sync, account, billing), our legitimate interests (security, abuse prevention, technical metrics), consent (marketing, if ever) and legal obligation (tax records). Your rights: access, rectification, erasure, restriction, portability, objection, and the right to complain to the supervisory authority in your country. Israel is recognised by the European Commission and by the United Kingdom as providing an adequate level of protection, so transfers to us are permitted; onward transfers to providers in the United States rest on those providers' data-processing agreements, which include the EU standard contractual clauses. We make no automated decisions with legal effects about you.</p>
+<h2>15. Messages and marketing</h2>
+<p>We send operational messages only: confirmations, trial-end notices, changes to these documents and security incidents. We will not send marketing email or notifications without your separate, explicit consent, and every such message will offer a simple way to opt out.</p>
+<h2>16. Changes to this policy</h2>
+<p>When we change this policy materially (for example a new provider, a new purpose or a longer retention period), we show a notice in the app before the change takes effect and ask for your consent again, and we update the effective date and the version history below. The Hebrew version is binding for users in Israel; for all other users the English version is binding.</p>
+<h2>17. Contact</h2>
+<p>Lilogon · <a href="mailto:lilogon.dev@gmail.com" dir="ltr">lilogon.dev@gmail.com</a> · 2 Hever St., Ramat Gan, Israel</p>
+<hr />
+<h3>Version history</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.0</td>
+<td>November 2, 2026</td>
+<td>Rewritten from the code-level data inventory: full disclosure of the AI providers (Soniox, Groq, Google Gemini), encrypted server-side storage of history for sync, 72-hour on-device audio vault, text around the cursor, explicit retention periods, complete account deletion, private mode, section-11 notice, GDPR chapter, minimum age 16. First Hebrew version</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>April 5, 2026</td>
+<td>Short version on the website</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>March 23, 2026</td>
+<td>First version (English only; wrongly stated that text is never stored on servers)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="footer">&copy; 2026 Lilogon · lilogon.dev@gmail.com</div>
+</body>
+</html>
